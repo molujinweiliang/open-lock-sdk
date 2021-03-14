@@ -70,7 +70,8 @@ const openLock = new SDK.OpenLock();
 |参数名|必选|类型|说明|
 |:---- |:---|:----- |-----   |
 |mackId |是  |String | 设备的mac_id  |
-|keyData |否  |String | 开锁密钥  |
+|keyData |是  |String | 开锁密钥  |
+|timeout |否  |String | 超时时间，默认5000（单位：ms）  |
 |callback |是  |Function | 开锁回调  |
 
 ##### 返回说明
@@ -84,9 +85,9 @@ const openLock = new SDK.OpenLock();
 ```
    open(){
         openLock.openLock({
-            mac_id，
-            manage_id，
-            filePath，
+            macId，
+            keyData，
+            timeout，
         }, (res)=>{
             if(res.errno==0){
                 console.log('开锁成功');
