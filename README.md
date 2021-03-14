@@ -9,7 +9,7 @@
 npm i open-lock-sdk --save
 ```
 2.小程序构建npm：
-> ps: <medium>构建成功之后会在根目录生成miniprogram_npm文件夹，在具体的页面中根据对应的路径引入miniprogram_npm/fxl-mp-sdk/main.js </medium>
+> ps: <medium>构建成功之后会在根目录生成miniprogram_npm文件夹，在具体的页面中根据对应的路径引入miniprogram_npm/open-lock-sdk/main.js </medium>
 
 3.项目中引入使用
 > ps: <medium>在具体的页面中根据对应的路径引入miniprogram_npm/open-lock-sdk/main.js </medium>
