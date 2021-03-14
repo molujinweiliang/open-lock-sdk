@@ -69,9 +69,8 @@ const openLock = new SDK.OpenLock();
 
 |参数名|必选|类型|说明|
 |:---- |:---|:----- |-----   |
-|mac_id |是  |String | 设备的mac_id  |
-|manage_id |是  |String | 设备的manage_id   |
-|filePath |否  |String | 人脸图片路径  |
+|mackId |是  |String | 设备的mac_id  |
+|keyData |否  |String | 开锁密钥  |
 |callback |是  |Function | 开锁回调  |
 
 ##### 返回说明
