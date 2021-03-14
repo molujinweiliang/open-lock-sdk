@@ -12,15 +12,15 @@ npm i open-lock-sdk --save
 > ps: <medium>构建成功之后会在根目录生成miniprogram_npm文件夹，在具体的页面中根据对应的路径引入miniprogram_npm/fxl-mp-sdk/main.js </medium>
 
 3.项目中引入使用
-> ps: <medium>在具体的页面中根据对应的路径引入miniprogram_npm/fxl-mp-sdk/main.js </medium>
+> ps: <medium>在具体的页面中根据对应的路径引入miniprogram_npm/open-lock-sdk/main.js </medium>
 
 ```
 就初始化举例
-import { Init } from './miniprogram_npm/fxl-mp-sdk/main'
+import { Init } from './miniprogram_npm/open-lock-sdk/main'
 const init = new Init();
 init.init(params);
 或者
-const SDK = require('./miniprogram_npm/fxl-mp-sdk/main')
+const SDK = require('./miniprogram_npm/open-lock-sdk/main')
 const init = new SDK.Init();
 init.init(params);
 ```
@@ -36,9 +36,9 @@ npm i open-lock-sdk --save
 2.项目中引入使用
 ```
 // 依赖加载
-import { Init } from 'fxl-mp-sdk'
+import { Init } from 'open-lock-sdk'
 // 全局引入
-import SDK from 'fxl-mp-sdk'
+import SDK from 'open-lock-sdk'
 ```
 
 > ps: <medium>在后面的方法实例中就以小程序引入为例，如果您是使用第三方框架开发，更改一下引入方式，请注意！！！</medium>
@@ -56,10 +56,10 @@ import SDK from 'fxl-mp-sdk'
 ## 实例化开锁类
 OpenLock 实例，可通过 new OpenLock() 获取。
 ```
-import { OpenLock } from './miniprogram_npm/fxl-mp-sdk/main'
+import { OpenLock } from './miniprogram_npm/open-lock-sdk/main'
 const openLock = new OpenLock();
 或
-const SDK = require('./miniprogram_npm/fxl-mp-sdk/main')
+const SDK = require('./miniprogram_npm/open-lock-sdk/main')
 const openLock = new SDK.OpenLock();
 ```
 
