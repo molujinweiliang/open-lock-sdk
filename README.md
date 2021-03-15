@@ -80,6 +80,19 @@ const openLock = new SDK.OpenLock();
 |:---- |:--- |
 |errno |结果编码 |
 |errmsg | 提示信息 |
+|deviceInfo | 设备信息（只有在errno为0时即开锁成功时返回） |
+
+deviceInfo：
+
+|参数名|说明|
+|:---- |:--- |
+|electricity |电量 |
+|status | 设备状态 |
+|deviceIdToService | 设备的mac地址（ios和安卓一致的） |
+|lockType | 设备类型 |
+|lockingStatus | 设备状态：01为反锁 |
+|version | 设备版本号 |
+|bigLockType | 设备大类型,默认为门锁（0： 预留；1: 门锁；2: 门禁；3: 6位密码锁） |
 
 ##### 示例：
 ```
@@ -91,6 +104,7 @@ const openLock = new SDK.OpenLock();
         }, (res)=>{
             if(res.errno==0){
                 console.log('开锁成功');
+                
             }esle{
                 console.log('开锁失败');
             }
