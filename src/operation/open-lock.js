@@ -54,7 +54,9 @@ export default class OpenLock extends AbstractBlueTooth{
             .subscribe(
                 res=> {
                     if (res.id == "02" && res['02'] == "00") {
-                        callback(errorCodeCallback(0));
+                        let callbackObj = errorCodeCallback(0);
+                        callbackObj.deviceInfo = currentDevice;
+                        callback(callbackObj);
                     }else {
                         callback(errorCodeCallback(1094));
                     }
